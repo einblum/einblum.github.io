@@ -5,16 +5,17 @@
 	<title>HELLO WORLD</title>
 </head>
 <body>
+	<p id="uid"></p>
 	<script>
 		var uid;
-		uid = (math.random()*100 << 2) & (math.random()*100<<2) & (math.random()*100<<2)& (math.random<<2) & (math.random()*100 <<2)
+		document.getElementById("uid").innerHTML = ((math.random()*100 << 2) & (math.random()*100<<2) & (math.random()*100<<2)& (math.random<<2) & (math.random()*100 <<2))
 	</script>
 	<button type= "button"
 	onclick= "document.getElementById('uid').write() = Date()">
 	What time is it? </button>
 	
 	<p id ="time"> </p>
-	<p id = "uid"> </p>
+
 
 
 </body>
