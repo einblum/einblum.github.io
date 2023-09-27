@@ -3,10 +3,58 @@
 <html>
 <head>
 	<title>HELLO WORLD</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+
+	.header {
+		font-family: 'Raleway', sans-serif;
+		background-color: white;
+		color: darkgoldenrod;
+		margin: 0;
+		padding: 20px;
+		position:relative;
+		overflow:hidden;
+		text-align:center;
+	}
+	.header a{
+		font-family: 'Raleway', sans-serif;
+		background-color: white;
+		color: darkgoldenrod;
+		margin: 0;
+		padding: 20px;
+		position:relative;
+		overflow:hidden;
+		text-align:center;
+		text-decoration: none;
+
+	}
+	</style>
 </head>
 <body>
+
+<div class="header" >
+
+	<div class="name-header" style="margin:0;"> 
+		<p id="top-name" style="font-size:x-large; margin:0px;"> ENBLOM <p id="bottom-name" style="font-size:500%; margin: 0px;"> MAX</p></p>
+	</div>
 	
-	<button type="button"
+	<div class="link-header" style="font-size: large; word-spacing:50px;">
+		<a id="page-link" href= "#projects"> Projects </a>
+		<a id="page-link" href="#contact"> Contact </a>
+		<a id="page-link" href="#photography"> Photography </a>
+		<a id="page-link" href="#resume"> Resume </a>
+	</div>
+</div>
+
+<div id="root">
+	<section id= "page1">
+	</section>
+	<section id="page2">
+
+	</section>
+</div>
+<button type="button"
 onclick="document.getElementById('uid').innerHTML = Math.floor(Math.random()*100000000000000)">
 generate user id.</button>
 
