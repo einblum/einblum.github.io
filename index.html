@@ -2,17 +2,65 @@
 
 <html>
 <head>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 	<title>HELLO WORLD</title>
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
+	.grid-container{
+		display:grid;
+		grid-template-columns:  .2fr .75fr .2fr .75fr .2fr .75fr .2fr .75fr .2fr;
+		grid-template-rows: [top] .3fr [middle].3fr[bottom];
+		font-family: 'Raleway', sans-serif;
+		background-color: white;
+		color: darkgoldenrod;
+
+
+	}
+	.name-header{
+		grid-area:top / 4 / middle / 7;
+		place-self: center;
+	}
+	.link-header1{
+		grid-area: middle / 2 / bottom / 3;
+		place-self: center;
+		animation: slideInLeft;
+		animation-duration: 1s;		
+	}
+	.link-header2{
+		grid-area: middle / 4 / bottom /5;
+		place-self: center;
+		
+		animation: slideInLeft;
+		animation-duration: 1s;
+	}
+	.link-header3{
+		grid-area: middle / 6 / bottom /7;
+		place-self: center;
+
+		animation: slideInRight;
+		animation-duration: 1s;
+	}
+	.link-header4{
+		grid-area: middle / 8 / bottom / 9;
+		place-self: center;
+
+		animation: slideInRight;
+		animation-duration: 1s;
+	}
+	.grid-container a{
+		text-decoration: none;
+		font-size: large;
+	}
+	
 
 	.header {
 		font-family: 'Raleway', sans-serif;
 		background-color: white;
 		color: darkgoldenrod;
-		margin: 0;
-		padding: 20px;
 		position:relative;
 		overflow:hidden;
 		text-align:center;
@@ -27,32 +75,37 @@
 		overflow:hidden;
 		text-align:center;
 		text-decoration: none;
-
 	}
+
 	</style>
 </head>
 <body>
 
-<div class="header" >
-
-	<div class="name-header" style="margin:0;"> 
-		<p id="top-name" style="font-size:x-large; margin:0px;"> ENBLOM <p id="bottom-name" style="font-size:500%; margin: 0px;"> MAX</p></p>
+<div class="grid-container">
+	<div class="name-header"> 
+		<p id="top-name" style="font-size:x-large; text-align: center; margin-bottom: 0; "> ENBLOM <p id="bottom-name" style="font-size:500%; margin: 0px; text-align: center;"> MAX</p></p>
 	</div>
 	
-	<div class="link-header" style="font-size: large; word-spacing:50px;">
+	<div class="link-header1" >
 		<a id="page-link" href= "#projects"> Projects </a>
+	</div>
+	<div class="link-header2" >
 		<a id="page-link" href="#contact"> Contact </a>
+	</div>
+	<div class="link-header3">
 		<a id="page-link" href="#photography"> Photography </a>
+	</div>
+	<div class="link-header4">
 		<a id="page-link" href="#resume"> Resume </a>
 	</div>
 </div>
-
 <div id="root">
 	<section id= "page1">
 	</section>
 	<section id="page2">
 
 	</section>
+</div>
 </div>
 <button type="button"
 onclick="document.getElementById('uid').innerHTML = Math.floor(Math.random()*100000000000000)">
